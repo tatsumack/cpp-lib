@@ -1,3 +1,4 @@
+#include <limits.h>
 #include <algorithm>
 #include <bitset>
 #include <cctype>
@@ -28,7 +29,7 @@
 #define REV(i, a, b) for (int i = (a); i >= (b); --i)
 #define CLR(a, b) memset((a), (b), sizeof(a))
 #define DUMP(x) cout << #x << " = " << (x) << endl;
-#define INF (3e15)
+#define INF (LLONG_MAX - 1e5)
 
 using namespace std;
 
