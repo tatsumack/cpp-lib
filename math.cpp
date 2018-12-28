@@ -2,6 +2,20 @@
 int gcd(int a, int b) { return b ? gcd(b, a % b) : a; }
 
 // 素因数
+vector<int> getPrimeFactors(int a) {
+    vector<int> s;
+    for (int i = 2; i * i <= a; i++) {
+        if (a % i != 0) continue;
+        while (a % i == 0) {
+            s.push_back(i);
+            a /= i;
+        }
+    }
+    if (a > 1) s.push_back(a);
+    return s;
+}
+
+// 素因数
 set<int> getPrimeFactors(int a) {
     set<int> s;
     for (int i = 2; i * i <= a; i++) {
